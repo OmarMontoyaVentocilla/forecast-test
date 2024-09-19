@@ -1,0 +1,11 @@
+
+<div class="container">
+  <div class="card-container">
+    @for (item of listForecast; track $index) {
+      <div class="card">
+        <h2>{{item.title}}</h2>
+        <button [routerLink]="item.url">Learn More</button>
+      </div>
+    }
+  </div>
+</div>

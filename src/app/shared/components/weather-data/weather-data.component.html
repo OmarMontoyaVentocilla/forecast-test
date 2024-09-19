@@ -1,0 +1,15 @@
+@if (loading) {
+  <p-skeleton width="40rem" height="4rem" />
+}@else {
+  <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+    <canvas baseChart width="800" height="800"
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend">
+  </canvas>
+  </div>
+}
+
+
+

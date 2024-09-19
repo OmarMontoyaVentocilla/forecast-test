@@ -1,0 +1,62 @@
+// Estilos globales y personalización
+$primary-color: #4a90e2;
+$secondary-color: #f5f7fa;
+$card-bg-color: #ffffff;
+$card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+$transition-time: 0.3s;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $secondary-color;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .card {
+    background-color: $card-bg-color;
+    padding: 20px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: $card-shadow;
+    transition: transform $transition-time, box-shadow $transition-time;
+    text-align: center;
+
+    h2 {
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: darken($primary-color, 25%);
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color $transition-time;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
